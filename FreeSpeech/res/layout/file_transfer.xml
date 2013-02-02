@@ -19,6 +19,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/helper"
         android:layout_below="@+id/textView1"
+        android:onClick="onClickChooseFile"
         android:text="@string/choose_file" />
 
     <Button

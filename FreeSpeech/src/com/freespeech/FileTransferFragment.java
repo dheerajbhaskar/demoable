@@ -14,6 +14,10 @@ public class FileTransferFragment extends Fragment {
 
 		View view = inflater.inflate(R.layout.file_transfer, container, false);
 		return view;
+
 	}
 
+	public void onClickChooseFile_actual(View view) {
+		System.out.println("actual listener clicked");
+	}
 }

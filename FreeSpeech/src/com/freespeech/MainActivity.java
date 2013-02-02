@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends FragmentActivity {
 
@@ -25,6 +26,7 @@ public class MainActivity extends FragmentActivity {
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
+	Fragment fileTransferFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +79,8 @@ public class MainActivity extends FragmentActivity {
 				fragment = new ChatFragment();
 				break;
 			case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
-				fragment = new FileTransferFragment();
-				break;
+				fileTransferFragment = new FileTransferFragment();
+				return fileTransferFragment;
 			case CONSTANTS.FRAGMENT_INDEX_VIDEO:
 				fragment = new VideoFragment();
 				break;
@@ -114,6 +116,11 @@ public class MainActivity extends FragmentActivity {
 			}
 			return null;
 		}
+	}
+
+	public void onClickChooseFile(View view) {
+		fileTransferFragment.onClickChooseFile_actual(view);
+		System.out.println("Choose File Clicked");
 	}
 
 }
