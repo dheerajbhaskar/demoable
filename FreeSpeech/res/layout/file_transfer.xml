@@ -19,13 +19,14 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_send_file"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btn_file_chooser"
         android:layout_alignBottom="@+id/btn_file_chooser"
         android:layout_alignLeft="@+id/helper"
         android:layout_alignParentRight="true"
+        android:onClick="onClickSendFile"
         android:text="@string/send_file" />
 
     <Button

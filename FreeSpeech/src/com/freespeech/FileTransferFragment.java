@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kaloer.filepicker.FilePickerActivity;
 
@@ -71,5 +72,10 @@ public class FileTransferFragment extends Fragment {
 				}
 			}
 		}
+	}
+
+	public void onClickSendFile_actual(View view) {
+		Toast.makeText(getActivity(), "File Sent", Toast.LENGTH_SHORT).show();
+
 	}
 }

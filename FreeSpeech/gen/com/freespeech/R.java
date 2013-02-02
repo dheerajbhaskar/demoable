@@ -18,8 +18,8 @@ public final class R {
     public static final class id {
         public static final int RelativeLayout1=0x7f070002;
         public static final int btn_file_chooser=0x7f07000b;
+        public static final int btn_send_file=0x7f07000a;
         public static final int button1=0x7f070004;
-        public static final int button2=0x7f07000a;
         public static final int editText1=0x7f070003;
         public static final int file_path_text_view=0x7f07000d;
         public static final int file_picker_image=0x7f070006;

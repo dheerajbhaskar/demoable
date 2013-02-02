@@ -122,4 +122,7 @@ public class MainActivity extends FragmentActivity {
 		fileTransferFragment.onClickChooseFile_actual(view);
 	}
 
+	public void onClickSendFile(View view) {
+		fileTransferFragment.onClickSendFile_actual(view);
+	}
 }
