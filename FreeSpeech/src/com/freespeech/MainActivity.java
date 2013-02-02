@@ -120,7 +120,6 @@ public class MainActivity extends FragmentActivity {
 
 	public void onClickChooseFile(View view) {
 		fileTransferFragment.onClickChooseFile_actual(view);
-		System.out.println("Choose File Clicked");
 	}
 
 }
