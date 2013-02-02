@@ -12,5 +12,6 @@
     <string name="choose_a_file_to_send">Choose a file to send</string>
     <string name="choose_file">Choose file</string>
     <string name="send_file">Send file</string>
+    <string name="enter_message_hint">Enter message</string>
 
 </resources>
