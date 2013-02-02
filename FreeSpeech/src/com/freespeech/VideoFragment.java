@@ -30,23 +30,23 @@ public class VideoFragment extends Fragment {
 
 		@Override
 		public void surfaceDestroyed(SurfaceHolder holder) {
-			// no-op -- wait until surfaceChanged()
-			// TODO understand why this has to be NO-OP
+			// no-op
 		}
 
 		@Override
 		public void surfaceCreated(SurfaceHolder holder) {
-			// initPreview(width, height);
-			// startPreview();
-			// TODO understand why these methods have to be called in this
-			// callback
+			// no-op -- wait until surfaceChanged()
+			// TODO understand why this has to be NO-OP
 
 		}
 
 		@Override
 		public void surfaceChanged(SurfaceHolder holder, int format, int width,
 				int height) {
-			// no-op
+			// TODO understand why these methods have to be called in this
+			// callback method
+			// initPreview(width, height);
+			// startPreview();
 
 		}
 	};
