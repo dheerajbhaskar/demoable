@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/lbl_file_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -12,30 +12,30 @@
         android:text="@string/choose_a_file_to_send"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/helper"
-        android:layout_below="@+id/textView1"
-        android:onClick="onClickChooseFile"
-        android:text="@string/choose_file" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignLeft="@+id/helper"
-        android:layout_alignParentRight="true"
-        android:text="@string/send_file" />
-
     <View
         android:id="@+id/helper"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_file_chooser"
+        android:layout_alignBottom="@+id/btn_file_chooser"
+        android:layout_alignLeft="@+id/helper"
+        android:layout_alignParentRight="true"
+        android:text="@string/send_file" />
+
+    <Button
+        android:id="@+id/btn_file_chooser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/helper"
+        android:layout_below="@+id/lbl_file_name"
+        android:onClick="onClickChooseFile"
+        android:text="@string/choose_file" />
 
 </RelativeLayout>
