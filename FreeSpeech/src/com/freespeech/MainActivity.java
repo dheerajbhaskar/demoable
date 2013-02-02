@@ -75,16 +75,10 @@ public class MainActivity extends FragmentActivity {
 			switch (position) {
 			case CONSTANTS.FRAGMENT_INDEX_CHAT:
 				fragment = new ChatFragment();
-				// Bundle args = new Bundle();
-				// args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position
-				// +
-				// 1);
-				// fragment.setArguments(args)
-
 				break;
-			// case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
-			//
-			// break;
+			case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
+				fragment = new FileTransferFragment();
+				break;
 			// case CONSTANTS.FRAGMENT_INDEX_VIDEO:
 			//
 			// break;
