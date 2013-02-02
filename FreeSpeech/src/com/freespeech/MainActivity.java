@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.view.MenuItem;
 
 public class MainActivity extends FragmentActivity {
 
@@ -44,8 +45,13 @@ public class MainActivity extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+		getMenuInflater().inflate(R.menu.main_activity_menu, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		return super.onMenuItemSelected(featureId, item);
 	}
 
 	/**
@@ -67,6 +73,22 @@ public class MainActivity extends FragmentActivity {
 			Bundle args = new Bundle();
 			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
 			fragment.setArguments(args);
+
+			switch (position) {
+			case CONSTANTS.FRAGMENT_INDEX_CHAT:
+
+				break;
+			case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
+
+				break;
+			case CONSTANTS.FRAGMENT_INDEX_VIDEO:
+
+				break;
+
+			default:
+				break;
+			}
+
 			return fragment;
 		}
 
