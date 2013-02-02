@@ -13,7 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/button1"
         android:ems="10"
-        android:hint="Type message" >
+        android:hint="@string/type_message" >
 
         <requestFocus />
     </EditText>
@@ -25,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="send" />
+        android:text="@string/send" />
 
     <ListView
         android:id="@+id/listView1"
