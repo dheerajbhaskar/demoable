@@ -70,12 +70,6 @@ public class MainActivity extends FragmentActivity {
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
 
-			// Fragment fragment = new DummySectionFragment();
-			// Bundle args = new Bundle();
-			// args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position +
-			// 1);
-			// fragment.setArguments(args);
-
 			Fragment fragment = null;
 
 			switch (position) {
@@ -88,14 +82,20 @@ public class MainActivity extends FragmentActivity {
 				// fragment.setArguments(args)
 
 				break;
-			case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
-
-				break;
-			case CONSTANTS.FRAGMENT_INDEX_VIDEO:
-
-				break;
+			// case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
+			//
+			// break;
+			// case CONSTANTS.FRAGMENT_INDEX_VIDEO:
+			//
+			// break;
 
 			default:
+				fragment = new DummySectionFragment();
+				Bundle args = new Bundle();
+				args.putInt(DummySectionFragment.ARG_SECTION_NUMBER,
+						position + 1);
+				fragment.setArguments(args);
+
 				break;
 			}
 
