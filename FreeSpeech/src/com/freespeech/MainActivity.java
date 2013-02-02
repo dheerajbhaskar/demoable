@@ -26,7 +26,7 @@ public class MainActivity extends FragmentActivity {
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
-	Fragment fileTransferFragment;
+	FileTransferFragment fileTransferFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
