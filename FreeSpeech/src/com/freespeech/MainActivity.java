@@ -79,9 +79,9 @@ public class MainActivity extends FragmentActivity {
 			case CONSTANTS.FRAGMENT_INDEX_FILE_SHARING:
 				fragment = new FileTransferFragment();
 				break;
-			// case CONSTANTS.FRAGMENT_INDEX_VIDEO:
-			//
-			// break;
+			case CONSTANTS.FRAGMENT_INDEX_VIDEO:
+				fragment = new VideoFragment();
+				break;
 
 			default:
 				fragment = new DummySectionFragment();
