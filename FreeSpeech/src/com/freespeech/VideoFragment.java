@@ -1,6 +1,7 @@
 package com.freespeech;
 
 import android.hardware.Camera;
+import android.hardware.Camera.CameraInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -13,11 +14,19 @@ import android.widget.Toast;
 
 public class VideoFragment extends Fragment {
 
+	private static final String TAG = "VideoFragment";
 	private SurfaceView preview;
 	private SurfaceHolder previewHolder;
 	private Camera camera = null;
 	private boolean cameraConfigured = false;
 	private boolean inPreview = false;
+	private int frontFacingCameraID;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		frontFacingCameraID = findFrontFacingCamera();
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,11 +41,27 @@ public class VideoFragment extends Fragment {
 		return view;
 	}
 
+	private int findFrontFacingCamera() {
+		int cameraId = -1;
+		// Search for the front facing camera
+		int numberOfCameras = Camera.getNumberOfCameras();
+		for (int i = 0; i < numberOfCameras; i++) {
+			CameraInfo info = new CameraInfo();
+			Camera.getCameraInfo(i, info);
+			if (info.facing == CameraInfo.CAMERA_FACING_FRONT) {
+				Log.d(TAG, "Camera found");
+				cameraId = i;
+				break;
+			}
+		}
+		return cameraId;
+	}
+
 	@Override
 	public void onResume() {
 		super.onResume();
 
-		camera = Camera.open();
+		camera = Camera.open(frontFacingCameraID);
 		startPreview();
 	}
 
