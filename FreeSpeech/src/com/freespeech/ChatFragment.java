@@ -12,7 +12,7 @@ public class ChatFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
-		View view = inflater.inflate(R.layout.chat, container);
+		View view = inflater.inflate(R.layout.chat, container, false);
 		return view;
 	}
 
