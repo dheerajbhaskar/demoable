@@ -1,5 +1,6 @@
 package com.freespeech;
 
+import android.content.ComponentName;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends FragmentActivity {
+
+	private static final String TAG = "FreeSpeech";
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -27,6 +30,10 @@ public class MainActivity extends FragmentActivity {
 	 */
 	ViewPager mViewPager;
 	FileTransferFragment fileTransferFragment;
+
+	private String PACKAGE_NAME;
+
+	private ComponentName mRunningService;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
