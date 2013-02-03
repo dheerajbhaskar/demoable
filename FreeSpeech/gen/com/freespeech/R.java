@@ -14,6 +14,13 @@ public final class R {
         public static final int file=0x7f020000;
         public static final int folder=0x7f020001;
         public static final int ic_launcher=0x7f020002;
+        public static final int ic_tab_host=0x7f020003;
+        public static final int ic_tab_host_disabled=0x7f020004;
+        public static final int ic_tab_host_enabled=0x7f020005;
+        public static final int ic_tab_use=0x7f020006;
+        public static final int ic_tab_use_disabled=0x7f020007;
+        public static final int ic_tab_use_enabled=0x7f020008;
+        public static final int icon=0x7f020009;
     }
     public static final class id {
         public static final int EditText=0x7f07000d;
