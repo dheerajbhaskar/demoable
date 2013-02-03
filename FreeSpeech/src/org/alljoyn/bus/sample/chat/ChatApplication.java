@@ -28,6 +28,8 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.util.Log;
 
+import com.freespeech.CONSTANTS;
+
 /**
  * The ChatAppliation class serves as the Model (in the sense of the common user
  * interface design pattern known as Model-View-Controller) for the chat
@@ -299,7 +301,8 @@ public class ChatApplication extends Application implements Observable {
 	 * Get the name part of the "use" channel.
 	 */
 	public synchronized String hostGetChannelName() {
-		return mHostChannelName;
+		// return mHostChannelName;
+		return CONSTANTS.CHANNEL_NAME;
 	}
 
 	/**
@@ -463,6 +466,7 @@ public class ChatApplication extends Application implements Observable {
 	 * back to the source, we need to echo the message into our history.
 	 */
 	public synchronized void newLocalUserMessage(String message) {
+		System.out.println("newLocalUserMessage");
 		addInboundItem("Me", message);
 		if (useGetChannelState() == AllJoynService.UseChannelState.JOINED) {
 			addOutboundItem(message);
