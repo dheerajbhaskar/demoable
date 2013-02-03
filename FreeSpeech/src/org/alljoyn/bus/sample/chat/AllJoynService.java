@@ -39,6 +39,7 @@ import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
 
+import com.freespeech.MainActivity;
 import com.freespeech.R;
 
 public class AllJoynService extends Service implements Observer {
@@ -71,7 +72,7 @@ public class AllJoynService extends Service implements Observer {
 
 		CharSequence title = "AllJoyn";
 		CharSequence message = "Chat Channel Hosting Service.";
-		Intent intent = new Intent(this, TabWidget.class);
+		Intent intent = new Intent(this, MainActivity.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
 				intent, 0);
 		Notification notification = new Notification(R.drawable.icon, null,
