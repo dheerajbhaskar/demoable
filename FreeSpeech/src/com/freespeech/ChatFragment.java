@@ -67,6 +67,10 @@ public class ChatFragment extends Fragment implements Observer {
 		updateChannelState();
 		updateHistory();
 
+		mChatApplication.hostSetChannelName(CONSTANTS.CHANNEL_NAME);
+		mChatApplication.hostInitChannel();
+		mChatApplication.hostStartChannel();
+
 		mChatApplication.addObserver(this);
 
 		return view;
@@ -179,6 +183,8 @@ public class ChatFragment extends Fragment implements Observer {
 		Log.i(TAG, "onDestroy()");
 		mChatApplication = (ChatApplication) getActivity().getApplication();
 		mChatApplication.deleteObserver(this);
+		mChatApplication.quit();
 		super.onDestroy();
+
 	}
 }

@@ -167,42 +167,49 @@ public class AllJoynService extends Service implements Observer {
 		String qualifier = (String) arg;
 
 		if (qualifier.equals(ChatApplication.APPLICATION_QUIT_EVENT)) {
+			System.out.println("APPLICATION_QUIT_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_APPLICATION_QUIT_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.USE_JOIN_CHANNEL_EVENT)) {
+			System.out.println("USE_JOIN_CHANNEL_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_USE_JOIN_CHANNEL_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.USE_LEAVE_CHANNEL_EVENT)) {
+			System.out.println("USE_LEAVE_CHANNEL_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_USE_LEAVE_CHANNEL_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.HOST_INIT_CHANNEL_EVENT)) {
+			System.out.println("HOST_INIT_CHANNEL_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_HOST_INIT_CHANNEL_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.HOST_START_CHANNEL_EVENT)) {
+			System.out.println("HOST_START_CHANNEL_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_HOST_START_CHANNEL_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.HOST_STOP_CHANNEL_EVENT)) {
+			System.out.println("HOST_STOP_CHANNEL_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_HOST_STOP_CHANNEL_EVENT);
 			mHandler.sendMessage(message);
 		}
 
 		if (qualifier.equals(ChatApplication.OUTBOUND_CHANGED_EVENT)) {
+			System.out.println("OUTBOUND_CHANGED_EVENT");
 			Message message = mHandler
 					.obtainMessage(HANDLE_OUTBOUND_CHANGED_EVENT);
 			mHandler.sendMessage(message);

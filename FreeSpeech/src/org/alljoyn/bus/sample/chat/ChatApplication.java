@@ -469,6 +469,7 @@ public class ChatApplication extends Application implements Observable {
 		System.out.println("newLocalUserMessage");
 		addInboundItem("Me", message);
 		if (useGetChannelState() == AllJoynService.UseChannelState.JOINED) {
+			System.out.println("JOINED");
 			addOutboundItem(message);
 		}
 	}
